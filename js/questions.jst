@@ -1,0 +1,587 @@
+// Questions array with duplicates removed
+const questions = [
+  {
+    numb: 1,
+    question: "What does HTML stand for?",
+    answer: "Hyper Text Markup Language",
+    options: [
+      "Hyper Text Preprocessor",
+      "Hyper Text Markup Language",
+      "Hyper Text Multiple Language",
+      "Hyper Tool Multi Language"
+    ]
+  },
+  {
+    numb: 2,
+    question: "What does CSS stand for?",
+    answer: "Cascading Style Sheet",
+    options: [
+      "Common Style Sheet",
+      "Colorful Style Sheet",
+      "Computer Style Sheet",
+      "Cascading Style Sheet"
+    ]
+  },
+  {
+    numb: 3,
+    question: "What does PHP stand for?",
+    answer: "Hypertext Preprocessor",
+    options: [
+      "Hypertext Preprocessor",
+      "Hypertext Programming",
+      "Hypertext Preprogramming",
+      "Hometext Preprocessor"
+    ]
+  },
+  {
+    numb: 4,
+    question: "What is Bootstrap used for?",
+    answer: "Frontend development framework",
+    options: [
+      "Backend development framework",
+      "Frontend development framework",
+      "Mobile app development framework",
+      "Database management framework"
+    ]
+  },
+  {
+    numb: 5,
+    question: "Which of the following is a feature of ES6?",
+    answer: "Arrow functions",
+    options: [
+      "Classes",
+      "Arrow functions",
+      "Promises",
+      "All of the above"
+    ]
+  },
+  {
+    numb: 6,
+    question: "Which CSS property is used to control the spacing between content and its border?",
+    answer: "Padding",
+    options: [
+      "Margin",
+      "Border",
+      "Padding",
+      "Spacing"
+    ]
+  },
+  {
+    numb: 7,
+    question: "In JavaScript, which method is used to select elements by their class?",
+    answer: "getElementsByClassName()",
+    options: [
+      "selectByClassName()",
+      "getElementsByClassName()",
+      "findClass()",
+      "querySelectorAll()"
+    ]
+  },
+  {
+    numb: 8,
+    question: "What is the purpose of the `document.readyState` in JavaScript?",
+    answer: "Checks if the HTML document is fully loaded",
+    options: [
+      "Determines if the page is connected to the server",
+      "Checks if the HTML document is fully loaded",
+      "Verifies JavaScript syntax",
+      "Logs page elements"
+    ]
+  },
+  {
+    numb: 9,
+    question: "What is the difference between `let` and `const` in JavaScript?",
+    answer: "`let` can be reassigned, but `const` cannot",
+    options: [
+      "`let` can be reassigned, but `const` cannot",
+      "`const` can be reassigned, but `let` cannot",
+      "Both can be reassigned",
+      "Neither can be reassigned"
+    ]
+  },
+  {
+    numb: 10,
+    question: "Which of the following is a responsive design framework?",
+    answer: "Bootstrap",
+    options: [
+      "Angular",
+      "React",
+      "Bootstrap",
+      "Django"
+    ]
+  },
+  {
+    numb: 11,
+    question: "Which CSS property controls the visual effect of how content is displayed?",
+    answer: "Display",
+    options: [
+      "Layout",
+      "Style",
+      "Display",
+      "Visibility"
+    ]
+  },
+  {
+    numb: 12,
+    question: "What is the purpose of the `box-sizing` property in CSS?",
+    answer: "Controls how the total width and height of an element are calculated",
+    options: [
+      "Defines border size",
+      "Controls how the total width and height of an element are calculated",
+      "Sets padding size",
+      "Adjusts margin settings"
+    ]
+  },
+  {
+    numb: 13,
+    question: "Which JavaScript method is used to remove an element from the DOM?",
+    answer: "remove()",
+    options: [
+      "delete()",
+      "remove()",
+      "removeChild()",
+      "clear()"
+    ]
+  },
+  {
+    numb: 14,
+    question: "Which of the following is true about ES6 modules?",
+    answer: "Supports `import` and `export`",
+    options: [
+      "Supports `import` and `export`",
+      "Only supports `import`",
+      "Only supports `export`",
+      "Does not support modules"
+    ]
+  },
+  {
+    numb: 15,
+    question: "What is the difference between `id` and `class` in CSS?",
+    answer: "`id` is unique per element, `class` can be applied to multiple elements",
+    options: [
+      "`id` is unique per element, `class` can be applied to multiple elements",
+      "`class` is unique per element, `id` can be applied to multiple elements",
+      "`id` applies to parent elements, `class` applies to child elements",
+      "Both `id` and `class` are unique per element"
+    ]
+  },
+  {
+    numb: 16,
+    question: "Which CSS property is used to control the font properties of text?",
+    answer: "Font",
+    options: [
+      "Text",
+      "Font-size",
+      "Font",
+      "Letter-spacing"
+    ]
+  },
+  {
+    numb: 17,
+    question: "What is the main purpose of ES6 Promises?",
+    answer: "Handle async operations",
+    options: [
+      "Handle synch operations",
+      "Handle async operations",
+      "Perform mathematical calculations",
+      "Manipulate DOM elements"
+    ]
+  },
+  {
+    numb: 18,
+    question: "Which Bootstrap class is used to create a responsive grid system?",
+    answer: "container-fluid",
+    options: [
+      "grid-system",
+      "container-fluid",
+      "responsive-grid",
+      "flex-container"
+    ]
+  },
+  {
+    numb: 19,
+    question: "What does CSS Grid layout allow developers to do?",
+    answer: "Create complex responsive web layouts",
+    options: [
+      "Align text vertically",
+      "Create complex responsive web layouts",
+      "Add animation to elements",
+      "Style buttons"
+    ]
+  },
+  {
+    numb: 20,
+    question: "Which JavaScript operator is used for equality comparison?",
+    answer: "===",
+    options: [
+      "==",
+      "===",
+      "!= ",
+      "!=="
+    ]
+  },
+  {
+    numb: 21,
+    question: "What is the purpose of the `@media` rule in CSS?",
+    answer: "To apply styles based on device conditions",
+    options: [
+      "To apply styles based on device conditions",
+      "To load external stylesheets",
+      "To define keyframes",
+      "To set font properties"
+    ]
+  },
+  {
+    numb: 22,
+    question: "What is ES6's syntax for creating a default export?",
+    answer: "export default functionName;",
+    options: [
+      "export default functionName;",
+      "export function functionName;",
+      "export class functionName;",
+      "default functionName;"
+    ]
+  },
+  {
+    numb: 23,
+    question: "Which of the following is NOT a valid CSS positioning value?",
+    answer: "statict",
+    options: [
+      "static",
+      "relative",
+      "absolute",
+      "fixed",
+      "statict"
+    ]
+  },
+  {
+    numb: 24,
+    question: "Which JavaScript method is used to loop through elements of an array?",
+    answer: "forEach()",
+    options: [
+      "map()",
+      "filter()",
+      "forEach()",
+      "reduce()"
+    ]
+  },
+  {
+    numb: 25,
+    question: "What is the main purpose of the `z-index` property in CSS?",
+    answer: "Controls the stack order of elements",
+    options: [
+      "Controls the stack order of elements",
+      "Sets element visibility",
+      "Adjusts text size",
+      "Specifies element animations"
+    ]
+  },
+  {
+    numb: 26,
+    question: "Which Bootstrap utility class sets a fixed position for an element?",
+    answer: "fixed-top",
+    options: [
+      "position-fixed",
+      "fixed-top",
+      "absolute",
+      "sticky"
+    ]
+  },
+  {
+    numb: 27,
+    question: "Which ES6 feature allows iterating over collections like arrays and maps?",
+    answer: "for...of loop",
+    options: [
+      "for...of loop",
+      "forEach()",
+      "map()",
+      "filter()"
+    ]
+  },
+  {
+    numb: 28,
+    question: "Which of the following CSS properties controls the background color of an element?",
+    answer: "background-color",
+    options: [
+      "background-color",
+      "text-color",
+      "border-color",
+      "padding-color"
+    ]
+  },
+  {
+    numb: 29,
+    question: "What is the primary purpose of Bootstrap?",
+    answer: "To create responsive and mobile-first web designs",
+    options: [
+      "To create static web pages",
+      "To create responsive and mobile-first web designs",
+      "To add dynamic functionality to websites",
+      "To style websites with advanced animations"
+    ]
+  },
+  {
+    numb: 30,
+    question: "Which CSS property controls the text color?",
+    answer: "color",
+    options: [
+      "font-size",
+      "color",
+      "background-color",
+      "border"
+    ]
+  },
+  {
+    numb: 31,
+    question: "What is ES6 primarily used for?",
+    answer: "Modern JavaScript development",
+    options: [
+      "Web design and styling",
+      "Server-side scripting",
+      "Modern JavaScript development",
+      "Database management"
+    ]
+  },
+  {
+    numb: 32,
+    question: "In JavaScript, which method is used to add an element to the end of an array?",
+    answer: "push()",
+    options: [
+      "push()",
+      "pop()",
+      "shift()",
+      "unshift()"
+    ]
+  },
+  {
+    numb: 33,
+    question: "Which CSS property is used to add space between elements?",
+    answer: "margin",
+    options: [
+      "padding",
+      "border",
+      "margin",
+      "content"
+    ]
+  },
+  {
+    numb: 34,
+    question: "Which method is used to iterate through an array in JavaScript?",
+    answer: "forEach()",
+    options: [
+      "map()",
+      "filter()",
+      "forEach()",
+      "reduce()"
+    ]
+  },
+  {
+    numb: 35,
+    question: "What does the Bootstrap grid system use to create columns?",
+    answer: "Classes like col-*, col-sm-*, col-md-*",
+    options: [
+      "Numbers and percentages",
+      "Classes like col-*, col-sm-*, col-md-*",
+      "Nested containers",
+      "Fixed width columns"
+    ]
+  },
+  {
+    numb: 36,
+    question: "Which CSS property controls the background image of an element?",
+    answer: "background-image",
+    options: [
+      "background-color",
+      "background-image",
+      "background-size",
+      "background-position"
+    ]
+  },
+  {
+    numb: 37,
+    question: "What is the default variable declaration method in ES6?",
+    answer: "let",
+    options: [
+      "var",
+      "const",
+      "let",
+      "define"
+    ]
+  },
+  {
+    numb: 38,
+    question: "Which JavaScript method is used to select elements by their ID?",
+    answer: "getElementById",
+    options: [
+      "querySelector",
+      "getElementsByClassName",
+      "getElementById",
+      "document.createElement"
+    ]
+  },
+  {
+    numb: 39,
+    question: "What is the CSS property used to control the shape of text?",
+    answer: "text-transform",
+    options: [
+      "text-shadow",
+      "text-transform",
+      "letter-spacing",
+      "line-height"
+    ]
+  },
+  {
+    numb: 40,
+    question: "Which ES6 feature is used for asynchronous operations?",
+    answer: "async/await",
+    options: [
+      "Promise",
+      "async/await",
+      "callback functions",
+      "thens"
+    ]
+  },
+  {
+    numb: 41,
+    question: "Which Bootstrap component is used for navigation menus?",
+    answer: "Navbar",
+    options: [
+      "Sidebar",
+      "Carousel",
+      "Navbar",
+      "Modal"
+    ]
+  },
+  {
+    numb: 42,
+    question: "What method is used to add an element to the beginning of an array in JavaScript?",
+    answer: "unshift()",
+    options: [
+      "push()",
+      "pop()",
+      "unshift()",
+      "shift()"
+    ]
+  },
+  {
+    numb: 43,
+    question: "Which CSS property controls the width of an element?",
+    answer: "width",
+    options: [
+      "height",
+      "width",
+      "padding",
+      "border"
+    ]
+  },
+  {
+    numb: 44,
+    question: "What is the Bootstrap utility class for padding?",
+    answer: "p-*",
+    options: [
+      "padding-*",
+      "m-*",
+      "p-*",
+      "gap-*"
+    ]
+  },
+  {
+    numb: 45,
+    question: "Which JavaScript method removes the last element from an array?",
+    answer: "pop()",
+    options: [
+      "pop()",
+      "push()",
+      "shift()",
+      "unshift()"
+    ]
+  },
+  {
+    numb: 46,
+    question: "What is the default value of a CSS 'display' property?",
+    answer: "block",
+    options: [
+      "inline",
+      "block",
+      "none",
+      "flex"
+    ]
+  },
+  {
+    numb: 47,
+    question: "Which ES6 feature is used to declare constants?",
+    answer: "const",
+    options: [
+      "var",
+      "let",
+      "const",
+      "define"
+    ]
+  },
+  {
+    numb: 48,
+    question: "What does the CSS 'flexbox' layout primarily help with?",
+    answer: "Arranging items within a container",
+    options: [
+      "Creating grids",
+      "Arranging items within a container",
+      "Styling text",
+      "Controlling images"
+    ]
+  },
+  {
+    numb: 49,
+    question: "Which Bootstrap component is used for displaying modals?",
+    answer: "Modal",
+    options: [
+      "Card",
+      "Tooltip",
+      "Popover",
+      "Modal"
+    ]
+  },
+  {
+    numb: 50,
+    question: "Which JavaScript method sorts an array in ascending order?",
+    answer: "sort()",
+    options: [
+      "reverse()",
+      "sort()",
+      "splice()",
+      "concat()"
+    ]
+  },
+  {
+    numb: 51,
+    question: "What is the CSS property that controls the style of list items?",
+    answer: "list-style",
+    options: [
+      "text-style",
+      "list-style",
+      "font-style",
+      "background-style"
+    ]
+  },
+  {
+    numb: 52,
+    question: "Which ES6 feature is used to declare private variables?",
+    answer: "private fields",
+    options: [
+      "var",
+      "let",
+      "private fields",
+      "const"
+    ]
+  },
+  {
+    numb: 53,
+    question: "What is the JavaScript method used to create a new object with specific properties?",
+    answer: "Object.create()",
+    options: [
+      "createObject()",
+      "new Object()",
+      "Object.create()",
+      "defineObject()"
+    ]
+  },
+];
